@@ -3,7 +3,19 @@
  ******************/
 
 const newPerson = function(newFirstName, newLastName, newAge, isMarried){
-    return {
+  if (newFirstName === undefined){
+    newFirstName = 'Anonymous'
+  }
+
+  if (newLastName === undefined){
+    newLastName = 'Person'
+  }
+  
+  if (isMarried === undefined){
+    isMarried = false
+  }
+
+  return {
       firstName: newFirstName,
       lastName: newLastName,
       age: newAge,
@@ -15,22 +27,15 @@ const newPerson = function(newFirstName, newLastName, newAge, isMarried){
         return newAge + 1;
       },
       getFullName: function(){
-        return newFirstName + ' ' + newLastName
+        return newFirstName + ' ' + newLastName;
       },
+      marry: true,
+      
+      
+    }
+        
 
-}
 
-if (newFirstName === undefined){
-  newFirstName = 'Anonymous'
-}
-
-if (newLastName === undefined){
-  newLastName = 'Person'
-}
-
-if (isMarried !== undefined){
-  isMarried = false
-}
 
     
 
